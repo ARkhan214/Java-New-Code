@@ -43,8 +43,7 @@ public class NewClassStudent {
     @Override
     public String toString() {
         return "NewClassStudent{" + "name=" + name + ", "
-                + "studentID=" + studentID + ", "
-                + "department=" + department + '}';
+                + "studentID=" + studentID + ", department=" + department + '}';
     }
     
     
