@@ -1,6 +1,7 @@
 package leatnwithchatgpt;
 
 import leatnwithchatgpt.student.Student;
+import leatnwithchatgpt.teachers.Teachers;
 
 public class LeatnWithChatGPT {
 
@@ -17,6 +18,16 @@ public class LeatnWithChatGPT {
         s.changeRoll(7);
         
         System.out.println(s);
+        
+        
+        
+        
+        
+        Teachers master=new Teachers();
+        master.setAge(35);
+        System.out.println(master);
+        
+        
 
 //s.displayInfo();
     }
