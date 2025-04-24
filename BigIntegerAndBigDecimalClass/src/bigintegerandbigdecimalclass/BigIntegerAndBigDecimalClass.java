@@ -56,7 +56,7 @@ public class BigIntegerAndBigDecimalClass {
             factorial=factorial.multiply(BigInteger.valueOf(i)); 
             
             System.out.println("----------------------");
-            System.out.println("Factorial is: "+factorial);
+            System.out.println("Factorial is: "+factorial);   
              
         }
         System.out.println("Factorial is: "+factorial);
