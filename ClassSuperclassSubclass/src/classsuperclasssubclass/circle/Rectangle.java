@@ -52,32 +52,16 @@ public class Rectangle extends GeometricObject{
     
     @Override
     public void setDateCreated(Date dateCreated) {
-        super.setDateCreated(dateCreated); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
+        super.setDateCreated(dateCreated); 
     }
 
     @Override
     public void setColor(String color) {
-        super.setColor(color); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
+        super.setColor(color); 
     }
 
         
     }
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    @Override
-    public String toString() {
-        return "Rectangle{" + "height=" + height + ", width=" + width + '}';
-    }
-    
-    
-    
-    
-}
+   
