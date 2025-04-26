@@ -1,0 +1,85 @@
+
+package guessnumberpractice;
+
+import java.util.Scanner;
+
+
+public class GuessNumberPractice {
+
+    public static void main(String[] args) {
+        
+        
+//         Scanner s=new Scanner(System.in);
+//        int randomNumber = (int) (Math.random() * 10); // generates number from 0 to 9
+//        
+//        System.out.println("Guess "+ randomNumber);
+//
+//        System.out.println("Guess a number between 0 and 9. You have 3 attempts.");
+//
+//        int attempts = 0;
+//        boolean isGuessed = false;
+//
+//        while (attempts < 3) {
+//            System.out.print("Enter your guess: ");
+//            int userInput = s.nextInt();
+//
+//            if (userInput == randomNumber) {
+//                System.out.println("You Win!");
+//                 isGuessed = true;
+//                break;
+//            } else if (userInput < randomNumber) {
+//                System.out.println("Too low!");
+//               
+//            } else {
+//                System.out.println("Too high!");
+//            }
+//
+//            attempts++;
+//        }
+//
+//        if (!isGuessed) {
+//            System.out.println("Better Luck Next Time! The correct number was: " + randomNumber);
+//        }
+//         s.close();
+
+
+
+
+
+
+ Scanner inpu = new Scanner(System.in);
+       
+         int randomNumber = (int) (Math.random() * 10);
+        System.out.println(randomNumber);
+        
+        System.out.println("Enter Guess number 0 to 9");
+        
+        
+        int count = 0;
+        boolean isGuessed = false;
+
+        while (count<3) {            
+            System.out.println("Enter your guess number");
+            int input = inpu.nextInt(); 
+            
+            if (randomNumber == input) {
+                System.out.println("Your Win");
+                isGuessed = true;
+                break;
+            } else if (randomNumber < input) {
+                System.out.println("Your guess number is High");
+            } else{
+                System.out.println("Your guess number is Lower");
+            }
+          
+            count++;
+
+        }
+        
+          if (!isGuessed) {
+                System.out.println("Sorry!! Try next time");
+            }
+        inpu.close();
+    }
+    
+}
