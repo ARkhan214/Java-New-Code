@@ -32,24 +32,46 @@ public class NewExamQuestion {
 
 
 
+//        Scanner s = new Scanner(System.in);
+//
+//        int sum = 0;
+//
+//        for (;;) {
+//            System.out.println("Enter number");
+//            int num = s.nextInt();
+//
+//            if (num < 0) {
+//                int minus=num;
+//            System.out.println("Sum of intiger is "+(sum+minus)+"\n"+" Enter posative number");
+//               break;
+//            }
+//            sum += num;
+//            
+//            System.out.println("Sum of intiger is " + sum);
+//
+//        }
+        
+        
+        
+        
         Scanner s = new Scanner(System.in);
 
         int sum = 0;
-
-        for (;;) {
-            System.out.println("Enter number");
+        for(int i:num){
+         System.out.println("Enter number");
             int num = s.nextInt();
-
+        
             if (num < 0) {
                 int minus=num;
             System.out.println("Sum of intiger is "+(sum+minus)+"\n"+" Enter posative number");
                break;
-            }
-            sum += num;
             
-            System.out.println("Sum of intiger is " + sum);
-
         }
+        
+        
+        
+        
+        
         
         
 
