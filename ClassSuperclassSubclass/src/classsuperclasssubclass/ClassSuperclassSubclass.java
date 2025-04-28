@@ -15,7 +15,17 @@ public class ClassSuperclassSubclass {
         Circle c = new Circle();
         Rectangle r = new Rectangle();
         
-        ArrayList<Circle> geo=new ArrayList<Circle>();
+        //Polymorphism Start
+        Rectangle r1=new Rectangle(3, 8);
+        Rectangle r2=new Rectangle(7, 5);
+        System.out.println(r1.getParametar());
+        System.out.println(r2.getParametar());
+         //Polymorphism End
+        
+        
+        
+        System.out.println("----test--------");
+//        ArrayList<Circle> geo=new ArrayList<Circle>();
        
         
         
