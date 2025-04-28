@@ -4,6 +4,8 @@ import classsuperclasssubclass.circle.Circle;
 import classsuperclasssubclass.circle.Rectangle;
 import classsuperclasssubclass.geometric.GeometricObject;
 import java.time.Instant;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 
 public class ClassSuperclassSubclass {
@@ -12,6 +14,16 @@ public class ClassSuperclassSubclass {
         GeometricObject g = new GeometricObject();
         Circle c = new Circle();
         Rectangle r = new Rectangle();
+        
+        ArrayList<Circle> geo=new ArrayList<Circle>();
+       
+        
+        
+        
+        Rectangle y=new Rectangle();        
+        System.out.println(y.equals(r));
+        System.out.println("-----------------------------");
+        
 
         c.setRadious(5);
         System.out.println("Perimeter Of Circle is:   "+c.getPerimeter());
