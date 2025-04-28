@@ -21,25 +21,41 @@ public class FileTask {
         System.out.println("enter limit how much you want");
         int input=s.nextInt();
         
+//        try {
+//            PrintWriter pf=new PrintWriter(even);
+//            for (int i = 1; i <= input; i++) {
+//                if (i%2==0) {
+//                    pf.print(i+", ");
+//                }
+//                
+//            }
+//            pf.close();
+//            
+//        } catch (FileNotFoundException ex) {
+//            Logger.getLogger(FileTask.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+        
+        
+        
+    PrintWriter n;
         try {
-            PrintWriter pf=new PrintWriter(even);
-            for (int i = 1; i <= input; i++) {
-                if (i%2==0) {
-                    pf.print(i+", ");
+            n = new PrintWriter("C:\\Users\\Admin\\Desktop\\Odd Number.txt");
+              for (int i = 1; i <= input; i++) {
+                if (i%2!=0) {
+                    n.println(i+", ");
                 }
                 
             }
-            pf.close();
             
-        } catch (FileNotFoundException ex) {
+              n.print(s);
+            n.close();
+        } 
+        
+        catch (FileNotFoundException ex) {
             Logger.getLogger(FileTask.class.getName()).log(Level.SEVERE, null, ex);
         }
         
-        
-        
-        
-        
-        
+      
         
         
         
