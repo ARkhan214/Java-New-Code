@@ -51,6 +51,21 @@ public class LearnFileTest {
         } catch (FileNotFoundException ex) {
             Logger.getLogger(LearnFileTest.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
+        
+        
+        
+     Scanner a=new Scanner(System.in);
+        System.out.println("Number");
+        int ab=a.nextInt();
+        
+        
+        System.out.println(ab);   
+        
+        
+        
+        
+        
 
     }
 
