@@ -22,8 +22,20 @@ public class ClassTestVehicleTruck {
         
 //        t.getGetSalePrice();
         System.out.println(t.getGetSalePrice());
-    
         
+      System.out.println("-------------------");  
+   double a=2;
+  double result=Math.pow(2, 31)-1;
+     System.out.println(result);
+     System.out.println(Integer.MAX_VALUE);
+     
+     
+     int i=10;
+        while (i>10) {            
+            i--;
+                    System.out.println(i);
+        }
+ System.out.println(i);
         
         
     }
