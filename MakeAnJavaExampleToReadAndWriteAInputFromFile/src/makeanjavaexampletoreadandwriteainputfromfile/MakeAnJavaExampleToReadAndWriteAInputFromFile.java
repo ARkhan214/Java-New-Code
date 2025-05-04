@@ -29,6 +29,7 @@ public class MakeAnJavaExampleToReadAndWriteAInputFromFile {
         try {
             try (PrintWriter p = new PrintWriter(f)) {
                 p.write("I am Abdur Rahim");
+                p.println("jsdkfghkfdgkjfhgkjfhgkjfh    fdskjfhdskjfhdkjhfkjdf");
                 p.close();
             }
             
