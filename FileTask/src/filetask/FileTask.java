@@ -15,11 +15,9 @@ public class FileTask {
 
    
     public static void main(String[] args) {
-       File even=new File("C:\\Users\\Admin\\Desktop\\Even Number.txt");
-        
-        Scanner s=new Scanner(System.in);
-        System.out.println("enter limit how much you want");
-        int input=s.nextInt();
+//       File even=new File("C:\\Users\\Admin\\Desktop\\Even Number.txt");
+//        
+       
         
 //        try {
 //            PrintWriter pf=new PrintWriter(even);
@@ -39,7 +37,12 @@ public class FileTask {
         
     PrintWriter n;
         try {
+             
             n = new PrintWriter("C:\\Users\\Admin\\Desktop\\Odd Number.txt");
+            Scanner s=new Scanner(System.in);
+        System.out.println("enter limit how much you want");
+        int input=s.nextInt();
+            
               for (int i = 1; i <= input; i++) {
                 if (i%2!=0) {
                     n.println(i+", ");
