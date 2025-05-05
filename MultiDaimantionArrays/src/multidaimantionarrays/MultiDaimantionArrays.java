@@ -15,37 +15,49 @@ public class MultiDaimantionArrays {
     
     public static void main(String[] args) {
         
-        Scanner n=new Scanner(System.in);
         
-        System.out.println("Enter row");
-        int row=n.nextInt();
-        System.out.println("Enter col");
-        int col=n.nextInt();
-         
-         
-        int myArrays[][]=new int[row][col];
+        int[][] number={{1,99,91,11,44},{0,10,9,9,11}};
         
-         for(int rows=0; rows<myArrays.length; rows++){
-             
-            for(int cols=0;cols<myArrays[row].length;cols++){
-                System.out.println("enter limit value");
-                int userInput=n.nextInt();
-                myArrays[row][col]=userInput;
-                } 
-        } 
         
-         
-        for(int rows=0; rows<myArrays.length; rows++){
-             
-            for(int cols=0;cols<myArrays[row].length;cols++){
-                System.out.println(myArrays[rows][cols]);
-               
-                }   
-//       
-//              
-//            
-              System.out.println("\n"); 
-        } 
+        
+        
+        
+        
+        
+        
+        
+        Scanner s = new Scanner(System.in);
+
+        System.out.println("Enter Row Number ");
+        int rowNumber = s.nextInt();
+
+        System.out.println("Enter Column Number ");
+        int columnNumber = s.nextInt();
+        
+        int[][] myArrays = new int[rowNumber][columnNumber];
+
+        for (int row = 0; row < myArrays.length; row++) {
+
+            for (int col = 0; col < myArrays[row].length; col++) {
+                System.out.println("Enter item value ");
+                int userInput = s.nextInt();
+                myArrays[row][col] = userInput;
+
+            }
+        }
+        
+        System.out.println("--------------------------------");
+        
+         for(int row=0; row < myArrays.length; row++){
+        
+            for(int col=0; col< myArrays[row].length; col++){
+                
+                System.out.print(myArrays[row][col]+ "\t");            
+            }  
+            
+            System.out.println("\n");
+            
+        }
          
          
          
