@@ -30,13 +30,35 @@ public class Account {
         this.balance = balance;
     }
     
-    public double withdraw(){
-    return balance;
+      public void deposit(double amount){
+          if (amount>0) {
+              balance +=amount;
+              System.out.println(amount+" taka Diposit successfully");
+          }
+               else {
+            System.out.println("Invalid deposit amount.");
+        }               
     }
     
-    public double deposit(){
-    return balance;
+    
+    public void withdraw(double amount){
+        if (amount>0 && balance>=amount) {
+            balance -=amount;
+            
+            System.out.println(amount+" taka withraw success");
+        }
+        else{System.out.println("Invalid amount");}
+        
     }
+    
+    
+    
+    public void result(){
+        System.out.println("Account Number: "+accountNumber);
+        System.out.println("Balance: "+balance);
+    
+    }
+  
     
     
     

@@ -25,8 +25,17 @@ public class SavingsAccount extends Account{
     }
 
     @Override
-    public double deposit() {
-        return super.deposit(); 
+    public void result() {
+        super.result(); 
+        System.out.println("Interest Rate: "+interestRate+"%");
+
+
+// Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
+    }
+
+   
+
+   
        
         
         
