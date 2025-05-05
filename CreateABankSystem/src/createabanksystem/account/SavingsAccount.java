@@ -1,48 +1,33 @@
-
 package createabanksystem.account;
 
-public class SavingsAccount extends Account{
-    public float interestRate;
+public class SavingsAccount extends Account {
+
+    private double interestRate;
 
     public SavingsAccount() {
     }
 
-    public SavingsAccount(float interestRate) {
+    public SavingsAccount(double interestRate) {
         this.interestRate = interestRate;
     }
 
-    public SavingsAccount(float interestRate, int accountNumber, double balance) {
+    public SavingsAccount(double interestRate, String accountNumber, double balance) {
         super(accountNumber, balance);
         this.interestRate = interestRate;
     }
 
-    public float getInterestRate() {
+    public double getInterestRate() {
         return interestRate;
     }
 
-    public void setInterestRate(float interestRate) {
+    public void setInterestRate(double interestRate) {
         this.interestRate = interestRate;
     }
 
     @Override
-    public void result() {
-        super.result(); 
-        System.out.println("Interest Rate: "+interestRate+"%");
-
-
-
+    public void printDetails() {
+        super.printDetails();
+        System.out.println("Interest Rate: " + interestRate + "%");
     }
 
-   
-
-   
-       
-        
-        
-        
-    }
-
-   
-    
-    
 }

@@ -1,9 +1,8 @@
-
 package createabanksystem.account;
 
+public class CurrentAccount extends Account {
 
-public class CurrentAccount extends Account{
-   public double overdraftLimit;
+    private double overdraftLimit;
 
     public CurrentAccount() {
     }
@@ -12,7 +11,7 @@ public class CurrentAccount extends Account{
         this.overdraftLimit = overdraftLimit;
     }
 
-    public CurrentAccount(double overdraftLimit, int accountNumber, double balance) {
+    public CurrentAccount(double overdraftLimit, String accountNumber, double balance) {
         super(accountNumber, balance);
         this.overdraftLimit = overdraftLimit;
     }
@@ -27,34 +26,25 @@ public class CurrentAccount extends Account{
 
     @Override
     public void withdraw(double amount) {
-//       double balance = getBalance();
+
+        double balance = super.getBalance();
 
         if (amount > 0 && balance + overdraftLimit >= amount) {
             balance -= amount;
+
+            super.setBalance(balance);
+
             System.out.println(amount + " withdrawn successfully (with overdraft if needed).");
         } else {
             System.out.println("Withdrawal exceeds overdraft limit or invalid amount.");
         }
-
-
-        
-        
     }
 
+    // Override to display Current Account details
     @Override
-    public void result() {
-        super.result();
-         System.out.println("Overdraft Limit: $" + overdraftLimit);
-
-
-// Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
+    public void printDetails() {
+        super.printDetails();
+        System.out.println("Overdraft Limit: $" + overdraftLimit);
     }
 
-    
-    
-    
-    
-    
-    
-    
 }
