@@ -25,7 +25,7 @@ public class CreateABankSystem {
         current.printDetails();
         current.deposit(500);
         current.withdraw(4000); // Testing overdraft
-        current.printDetails();
-
+        current.printDetails();       
+       
     }
 }
