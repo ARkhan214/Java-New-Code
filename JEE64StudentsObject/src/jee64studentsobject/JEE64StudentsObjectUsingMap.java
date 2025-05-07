@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.Scanner;
 import jee64studentsobject.student.Student;
 
-public class JEE64StudentsObject {
+public class JEE64StudentsObjectUsingMap {
 
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
