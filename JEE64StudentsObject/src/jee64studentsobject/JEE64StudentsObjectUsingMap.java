@@ -20,6 +20,16 @@ public class JEE64StudentsObjectUsingMap {
         studentInfo.put(2, new Student("Zarif", 276, "Bangadesh"));
         studentInfo.put(3, new Student("Ruman", 277, "Bangadesh"));
         studentInfo.put(4, new Student("Rakib", 274, "Bangadesh"));
+        studentInfo.put(5, new Student("Habib", 275, "Bangadesh"));
+        studentInfo.put(6, new Student("Zarif", 276, "Bangadesh"));
+        studentInfo.put(7, new Student("Ruman", 277, "Bangadesh"));
+        studentInfo.put(8, new Student("Rakib", 274, "Bangadesh"));
+        studentInfo.put(9, new Student("Habib", 275, "Bangadesh"));
+        studentInfo.put(10, new Student("Zarif", 276, "Bangadesh"));
+        studentInfo.put(11, new Student("Ruman", 277, "Bangadesh"));
+        studentInfo.put(12, new Student("Rakib", 274, "Bangadesh"));
+        studentInfo.put(13, new Student("Ruman", 277, "Bangadesh"));
+        studentInfo.put(14, new Student("Rakib", 274, "Bangadesh"));
 
        // System.out.println(studentInfo);
         System.out.println("===========");
