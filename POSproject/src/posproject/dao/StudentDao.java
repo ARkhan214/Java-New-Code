@@ -15,7 +15,7 @@ public class StudentDao {
     DataBaseUtil du=new DataBaseUtil();
      public void saveCustomer(String name,String cell, String email,JTable jt){
     
-        String sql="insert into customer(name,cell,email,address) values(?,?,?,?)";
+        String sql="insert into customer(name,cell,email) values(?,?,?)";
         
         try {
             ps=du.getCon().prepareStatement(sql);
