@@ -9,7 +9,7 @@ import java.util.logging.Logger;
 public class DataBaseUtil {
 
     private Connection con = null;
-    private final String url = "jdbc:mysql://localhost:3306/sys";
+    private final String url = "jdbc:mysql://localhost:3306/pos";
     private final String user = "root";
     private final String password = "1234";
     private final String driver = "com.mysql.cj.jdbc.Driver";
@@ -17,11 +17,13 @@ public class DataBaseUtil {
     public Connection getCon() {
         try {
             Class.forName(driver);
-            con = DriverManager.getConnection(url, user, password);
-
-        } catch (ClassNotFoundException | SQLException ex) {
+            con=DriverManager.getConnection(url, user, password);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(DataBaseUtil.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
             Logger.getLogger(DataBaseUtil.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
         return con;
     }
 }
