@@ -15,20 +15,20 @@ public class POS {
         
         
         
-        DBUtil db = new DBUtil();
-        String sql = "insert into category(id, name)values(?,?)";
-        try {
-            PreparedStatement ps = db.getconn().prepareStatement(sql);
-            ps.setInt(1, 1287420);
-            ps.setString(2, "Abdur Rahim");
-            ps.executeUpdate();
-            ps.close();
-            db.getconn().close();
-        } catch (SQLException ex) {
-            Logger.getLogger(POS.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-     
+//        DBUtil db = new DBUtil();
+//        String sql = "insert into category(id, name)values(?,?)";
+//        try {
+//            PreparedStatement ps = db.getconn().prepareStatement(sql);
+//            ps.setInt(1, 1287420);
+//            ps.setString(2, "Abdur Rahim");
+//            ps.executeUpdate();
+//            ps.close();
+//            db.getconn().close();
+//        } catch (SQLException ex) {
+//            Logger.getLogger(POS.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//        
+//     
     }
     
 }
