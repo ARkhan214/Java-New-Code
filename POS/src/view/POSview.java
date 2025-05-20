@@ -39,7 +39,7 @@ public class POSview extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         btnHome = new javax.swing.JButton();
         btnCustomer = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        btnCategory = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         btnSupplier = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
@@ -132,10 +132,10 @@ public class POSview extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setText("Category");
-        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnCategory.setText("Category");
+        btnCategory.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton3MouseClicked(evt);
+                btnCategoryMouseClicked(evt);
             }
         });
 
@@ -185,7 +185,7 @@ public class POSview extends javax.swing.JFrame {
                     .addComponent(jButton6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnHome, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnCustomer, javax.swing.GroupLayout.DEFAULT_SIZE, 158, Short.MAX_VALUE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 158, Short.MAX_VALUE)
+                    .addComponent(btnCategory, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 158, Short.MAX_VALUE)
                     .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, 158, Short.MAX_VALUE)
                     .addComponent(btnSupplier, javax.swing.GroupLayout.DEFAULT_SIZE, 158, Short.MAX_VALUE)
                     .addComponent(jButton8, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 158, Short.MAX_VALUE))
@@ -201,7 +201,7 @@ public class POSview extends javax.swing.JFrame {
                 .addGap(43, 43, 43)
                 .addComponent(btnSupplier)
                 .addGap(48, 48, 48)
-                .addComponent(jButton3)
+                .addComponent(btnCategory)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
                 .addComponent(jButton4)
                 .addGap(53, 53, 53)
@@ -541,10 +541,10 @@ public class POSview extends javax.swing.JFrame {
         tabMain.setSelectedIndex(2);
     }//GEN-LAST:event_btnSupplierMouseClicked
 
-    private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
+    private void btnCategoryMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCategoryMouseClicked
         // TODO add your handling code here:
          tabMain.setSelectedIndex(3);
-    }//GEN-LAST:event_jButton3MouseClicked
+    }//GEN-LAST:event_btnCategoryMouseClicked
 
     private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
  tabMain.setSelectedIndex(4);
@@ -612,6 +612,7 @@ public class POSview extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnCategory;
     private javax.swing.JButton btnCustomer;
     private javax.swing.JButton btnCustomerDelete;
     private javax.swing.JButton btnCustomerEdit;
@@ -619,7 +620,6 @@ public class POSview extends javax.swing.JFrame {
     private javax.swing.JButton btnCustomerSave;
     private javax.swing.JButton btnHome;
     private javax.swing.JButton btnSupplier;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;

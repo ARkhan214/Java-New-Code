@@ -59,6 +59,7 @@ public class CustomerDao {
                 rs.close();
                 ps.close();
                 util.getconn().close();
+                rs.close();
 
             }
 
