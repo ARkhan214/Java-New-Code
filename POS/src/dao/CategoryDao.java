@@ -1,3 +1,4 @@
+
 package dao;
 
 import java.sql.PreparedStatement;
@@ -8,63 +9,60 @@ import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableModel;
 import util.DBUtil;
 
-public class CustomerDao {
 
-    DBUtil util = new DBUtil();
+public class CategoryDao {
+    DBUtil du=new DBUtil();
     PreparedStatement ps;
-
-    public void saveCustomer(String name, String email, String cell, String address,JTable jt) {
-        String sql = "insert into customer(name,cell,email,address) value(?,?,?,?)";
+    
+    
+   public void saveCategory(String name,JTable jt) {
+        String sql = "insert into category(name) value(?)";
         try {
-            ps = util.getconn().prepareStatement(sql);
+            ps = du.getconn().prepareStatement(sql);
             ps.setString(1, name);
-            ps.setString(2, cell);
-            ps.setString(3, email);
-            ps.setString(4, address);
+            
 
             ps.executeUpdate();
             ps.close();
-            util.getconn().close();
-            JOptionPane.showMessageDialog(null, "Customer data Save successful");
-            showAllCustomer(jt);
+            du.getconn().close();
+            JOptionPane.showMessageDialog(null, "Category data Save successful");
+            
+            showAllCategory(jt);
             
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Customer data Save not successful");
+            JOptionPane.showMessageDialog(null, "Category data Save not successful");
             Logger.getLogger(CustomerDao.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-    }
+    } 
+    
+    
+    public void showAllCategory(JTable jt) {
 
-    public void showAllCustomer(JTable jt) {
-
-        String[] columName = {"ID", "Name", "Cell", "Email", "Address"};
+        String[] columName = {"ID", "Name"};
         DefaultTableModel tableMode = new DefaultTableModel(columName, 0);
         jt.setModel(tableMode);
         
-        String sql = "select*from customer";
+        String sql = "select*from category";
 
         try {
-            PreparedStatement ps = util.getconn().prepareStatement(sql);
+            PreparedStatement ps = du.getconn().prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
 
             while (rs.next()) {
                 int id = rs.getInt("id");
                 String name = rs.getString("name");
-                String email = rs.getString("email");
-                String cell = rs.getString("cell");
-                String address = rs.getString("address");
                 
-                Object[] rowData = {id, name, email, cell, address};
+                Object[] rowData = {id, name};
                 tableMode.addRow(rowData);
   
                
             }
                 rs.close();
                 ps.close();
-                util.getconn().close();
+                du.getconn().close();
                 rs.close();
 
         } catch (SQLException ex) {
@@ -72,5 +70,8 @@ public class CustomerDao {
         }
 
     }
-
+   
+   
+   
+    
 }

@@ -4,7 +4,9 @@
  */
 package view;
 
+import dao.CategoryDao;
 import dao.CustomerDao;
+
 import javax.swing.JTextField;
 import util.DBUtil;
 
@@ -15,7 +17,7 @@ import util.DBUtil;
 public class POSview extends javax.swing.JFrame {
     DBUtil util=new DBUtil();
     CustomerDao cd = new CustomerDao();
-    
+    CategoryDao categoryD = new CategoryDao();
     
     /**
      * Creates new form POSview
@@ -23,6 +25,7 @@ public class POSview extends javax.swing.JFrame {
     public POSview() {
         initComponents();
         cd.showAllCustomer(tblCustomer);
+        categoryD.showAllCategory(tblCategory);
     }
 
     /**
@@ -46,10 +49,10 @@ public class POSview extends javax.swing.JFrame {
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
         tabMain = new javax.swing.JTabbedPane();
-        jTabbedPane2 = new javax.swing.JTabbedPane();
+        tabHome = new javax.swing.JTabbedPane();
         jPanel3 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jTabbedPane3 = new javax.swing.JTabbedPane();
+        tabCustomer = new javax.swing.JTabbedPane();
         jPanel4 = new javax.swing.JPanel();
         jPanel11 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
@@ -69,22 +72,33 @@ public class POSview extends javax.swing.JFrame {
         btnCustomerEdit = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblCustomer = new javax.swing.JTable();
-        jTabbedPane4 = new javax.swing.JTabbedPane();
+        tabSupplier = new javax.swing.JTabbedPane();
         jPanel5 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
-        jTabbedPane5 = new javax.swing.JTabbedPane();
+        tabCategory = new javax.swing.JTabbedPane();
         jPanel6 = new javax.swing.JPanel();
+        jPanel12 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
-        jTabbedPane6 = new javax.swing.JTabbedPane();
+        jLabel15 = new javax.swing.JLabel();
+        txtIdCategory = new javax.swing.JTextField();
+        jLabel16 = new javax.swing.JLabel();
+        txtNameCategory = new javax.swing.JTextField();
+        btnCategorySave = new javax.swing.JButton();
+        btnCategoryEdit = new javax.swing.JButton();
+        btnCategoryDelete = new javax.swing.JButton();
+        btnCategoryReset = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        tblCategory = new javax.swing.JTable();
+        tabPurchace = new javax.swing.JTabbedPane();
         jPanel7 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
-        jTabbedPane7 = new javax.swing.JTabbedPane();
+        tabSeles = new javax.swing.JTabbedPane();
         jPanel8 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
-        jTabbedPane8 = new javax.swing.JTabbedPane();
+        tabStock = new javax.swing.JTabbedPane();
         jPanel9 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
-        jTabbedPane9 = new javax.swing.JTabbedPane();
+        tabReport = new javax.swing.JTabbedPane();
         jPanel10 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
 
@@ -238,9 +252,9 @@ public class POSview extends javax.swing.JFrame {
                 .addContainerGap(449, Short.MAX_VALUE))
         );
 
-        jTabbedPane2.addTab("tab1", jPanel3);
+        tabHome.addTab("tab1", jPanel3);
 
-        tabMain.addTab("tab1", jTabbedPane2);
+        tabMain.addTab("tab1", tabHome);
 
         jPanel11.setBackground(new java.awt.Color(0, 255, 204));
 
@@ -378,9 +392,9 @@ public class POSview extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jTabbedPane3.addTab("tab1", jPanel4);
+        tabCustomer.addTab("tab1", jPanel4);
 
-        tabMain.addTab("tab2", jTabbedPane3);
+        tabMain.addTab("tab2", tabCustomer);
 
         jLabel4.setText("3");
 
@@ -401,32 +415,113 @@ public class POSview extends javax.swing.JFrame {
                 .addContainerGap(469, Short.MAX_VALUE))
         );
 
-        jTabbedPane4.addTab("tab1", jPanel5);
+        tabSupplier.addTab("tab1", jPanel5);
 
-        tabMain.addTab("tab3", jTabbedPane4);
+        tabMain.addTab("tab3", tabSupplier);
 
-        jLabel5.setText("4");
+        jPanel12.setBackground(new java.awt.Color(0, 153, 51));
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setText("Category");
+
+        javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
+        jPanel12.setLayout(jPanel12Layout);
+        jPanel12Layout.setHorizontalGroup(
+            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jPanel12Layout.setVerticalGroup(
+            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+        );
+
+        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel15.setText("ID");
+
+        jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel16.setText("Name");
+
+        btnCategorySave.setText("Save");
+        btnCategorySave.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnCategorySaveMouseClicked(evt);
+            }
+        });
+
+        btnCategoryEdit.setText("Edit");
+
+        btnCategoryDelete.setText("Delete");
+
+        btnCategoryReset.setText("Reset");
+
+        tblCategory.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane2.setViewportView(tblCategory);
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(380, 380, 380)
-                .addComponent(jLabel5)
-                .addContainerGap(524, Short.MAX_VALUE))
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGap(14, 14, 14)
+                        .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtIdCategory, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(95, 95, 95)
+                        .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(31, 31, 31)
+                        .addComponent(txtNameCategory, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGap(43, 43, 43)
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 586, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel6Layout.createSequentialGroup()
+                                .addComponent(btnCategorySave)
+                                .addGap(87, 87, 87)
+                                .addComponent(btnCategoryEdit)
+                                .addGap(72, 72, 72)
+                                .addComponent(btnCategoryDelete)
+                                .addGap(67, 67, 67)
+                                .addComponent(btnCategoryReset)))))
+                .addContainerGap(281, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(104, 104, 104)
-                .addComponent(jLabel5)
-                .addContainerGap(448, Short.MAX_VALUE))
+                .addComponent(jPanel12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel15)
+                    .addComponent(txtIdCategory, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel16)
+                    .addComponent(txtNameCategory, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(60, 60, 60)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnCategorySave)
+                    .addComponent(btnCategoryEdit)
+                    .addComponent(btnCategoryDelete)
+                    .addComponent(btnCategoryReset))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 331, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(52, 52, 52))
         );
 
-        jTabbedPane5.addTab("tab1", jPanel6);
+        tabCategory.addTab("tab1", jPanel6);
 
-        tabMain.addTab("tab4", jTabbedPane5);
+        tabMain.addTab("tab4", tabCategory);
 
         jLabel6.setText("5");
 
@@ -447,9 +542,9 @@ public class POSview extends javax.swing.JFrame {
                 .addContainerGap(470, Short.MAX_VALUE))
         );
 
-        jTabbedPane6.addTab("tab1", jPanel7);
+        tabPurchace.addTab("tab1", jPanel7);
 
-        tabMain.addTab("tab5", jTabbedPane6);
+        tabMain.addTab("tab5", tabPurchace);
 
         jLabel7.setText("6");
 
@@ -470,9 +565,9 @@ public class POSview extends javax.swing.JFrame {
                 .addContainerGap(429, Short.MAX_VALUE))
         );
 
-        jTabbedPane7.addTab("tab1", jPanel8);
+        tabSeles.addTab("tab1", jPanel8);
 
-        tabMain.addTab("tab6", jTabbedPane7);
+        tabMain.addTab("tab6", tabSeles);
 
         jLabel8.setText("7");
 
@@ -493,9 +588,9 @@ public class POSview extends javax.swing.JFrame {
                 .addContainerGap(469, Short.MAX_VALUE))
         );
 
-        jTabbedPane8.addTab("tab1", jPanel9);
+        tabStock.addTab("tab1", jPanel9);
 
-        tabMain.addTab("tab7", jTabbedPane8);
+        tabMain.addTab("tab7", tabStock);
 
         jLabel9.setText("8");
 
@@ -516,9 +611,9 @@ public class POSview extends javax.swing.JFrame {
                 .addContainerGap(468, Short.MAX_VALUE))
         );
 
-        jTabbedPane9.addTab("tab1", jPanel10);
+        tabReport.addTab("tab1", jPanel10);
 
-        tabMain.addTab("tab8", jTabbedPane9);
+        tabMain.addTab("tab8", tabReport);
 
         getContentPane().add(tabMain, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 20, 910, 630));
 
@@ -573,8 +668,19 @@ public class POSview extends javax.swing.JFrame {
         String cell=txtCustomercell.getText().trim();
         String address=txtCustomeraddress.getText().trim();
         
-        cd.saveCustomer(name, email, cell, address);
+        cd.saveCustomer(name, email, cell, address,tblCustomer);
+        cd.showAllCustomer(tblCustomer);
     }//GEN-LAST:event_btnCustomerSaveMouseClicked
+
+    private void btnCategorySaveMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCategorySaveMouseClicked
+        // TODO add your handling code here:
+        String name = txtNameCategory.getText().trim();    
+       categoryD.saveCategory(name, tblCategory);
+      categoryD.showAllCategory(tblCategory);
+        
+        
+        
+    }//GEN-LAST:event_btnCategorySaveMouseClicked
 
     /**
      * @param args the command line arguments
@@ -613,6 +719,10 @@ public class POSview extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCategory;
+    private javax.swing.JButton btnCategoryDelete;
+    private javax.swing.JButton btnCategoryEdit;
+    private javax.swing.JButton btnCategoryReset;
+    private javax.swing.JButton btnCategorySave;
     private javax.swing.JButton btnCustomer;
     private javax.swing.JButton btnCustomerDelete;
     private javax.swing.JButton btnCustomerEdit;
@@ -630,6 +740,8 @@ public class POSview extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -641,6 +753,7 @@ public class POSview extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
+    private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -650,20 +763,24 @@ public class POSview extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTabbedPane jTabbedPane2;
-    private javax.swing.JTabbedPane jTabbedPane3;
-    private javax.swing.JTabbedPane jTabbedPane4;
-    private javax.swing.JTabbedPane jTabbedPane5;
-    private javax.swing.JTabbedPane jTabbedPane6;
-    private javax.swing.JTabbedPane jTabbedPane7;
-    private javax.swing.JTabbedPane jTabbedPane8;
-    private javax.swing.JTabbedPane jTabbedPane9;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTabbedPane tabCategory;
+    private javax.swing.JTabbedPane tabCustomer;
+    private javax.swing.JTabbedPane tabHome;
     private javax.swing.JTabbedPane tabMain;
+    private javax.swing.JTabbedPane tabPurchace;
+    private javax.swing.JTabbedPane tabReport;
+    private javax.swing.JTabbedPane tabSeles;
+    private javax.swing.JTabbedPane tabStock;
+    private javax.swing.JTabbedPane tabSupplier;
+    private javax.swing.JTable tblCategory;
     private javax.swing.JTable tblCustomer;
     private javax.swing.JTextField txtCustomeraddress;
     private javax.swing.JTextField txtCustomercell;
     private javax.swing.JTextField txtCustomeremail;
     private javax.swing.JTextField txtCustomerid;
     private javax.swing.JTextField txtCustomername;
+    private javax.swing.JTextField txtIdCategory;
+    private javax.swing.JTextField txtNameCategory;
     // End of variables declaration//GEN-END:variables
 }
