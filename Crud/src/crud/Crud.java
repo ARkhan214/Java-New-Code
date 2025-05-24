@@ -14,20 +14,51 @@ public class Crud {
     static String sql = "";
 
     public static void main(String[] args) {
-        saveStudents("Md.Rahim khan", "msrahim@gmail.com");
-        System.out.println("After save");
-        showAllStudents();
-        System.out.println("----------");
+//        saveStudents("Md khan", "msrahim@gmail.com");
+//        System.out.println("After save");
+//        showAllStudents();
+//        System.out.println("----------");
+//
+//        updateStudents("Atiqul Islam", "atiqul@gmail.com", 2);
+//        System.out.println("After update");
+//        showAllStudents();
+//        System.out.println("--------------------");
+//        updateStudents("Halima Akter", "halima@gmail.com", 3);
+//        System.out.println("After update");
+//        showAllStudents();
+//        System.out.println("--------------------");
+//        updateStudents("Ariqur Rahmam", "atiqur@gmail.com", 4);
+//        System.out.println("After update");
+//        showAllStudents();
+//        System.out.println("--------------------");
+//        updateStudents("Sathe Khanom", "sathe@gmail.com", 5);
+//        System.out.println("After update");
+//        showAllStudents();
+//        System.out.println("--------------------");
+//        updateStudents("Abdullah Al Madud", "masud@gmail.com", 6);
+//        System.out.println("After update");
+//        showAllStudents();
+//        System.out.println("--------------------");
+//        updateStudents("Eiasin Prothan", "eiasin@gmail.com", 7);
+//        System.out.println("After update");
+//        showAllStudents();
+//        System.out.println("--------------------");
+//        updateStudents("Md.Rahmatullah", "rahmatullah@gmail.com", 8);
+//        System.out.println("After update");
+//        showAllStudents();
+//        System.out.println("--------------------");
 
-        updateStudents("AR.Khan", "ar@gmail.com", 4);
-        System.out.println("After update");
-        showAllStudents();
-        System.out.println("--------------------");
-
-        deleteStudents(1);
-        System.out.println("After Delete");
+        deleteStudents(9);
+        deleteStudents(10);
+        deleteStudents(11);
+           System.out.println("After Delete");
         showAllStudents();
         System.out.println("-------------------");
+
+//        deleteStudents(1);
+//        System.out.println("After Delete");
+//        showAllStudents();
+//        System.out.println("-------------------");
 
     }
 
