@@ -17,7 +17,7 @@ public class CustomerDao {
     PreparedStatement ps;
 
     public void saveCustomer(String name, String email, String cell, String address,JTable jt) {
-        String sql = "insert into customer(name,cell,email,address) value(?,?,?,?)";
+        String sql = "insert into customer(name,email,cell,address) value(?,?,?,?)";
         try {
             ps = util.getconn().prepareStatement(sql);
             ps.setString(1, name);

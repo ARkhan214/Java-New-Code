@@ -514,7 +514,7 @@ public class POSview extends javax.swing.JFrame {
                     .addComponent(btnCategoryEdit)
                     .addComponent(btnCategoryDelete)
                     .addComponent(btnCategoryReset))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 331, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(52, 52, 52))
         );
@@ -667,7 +667,7 @@ public class POSview extends javax.swing.JFrame {
         String email=txtCustomeremail.getText().trim();
         String cell=txtCustomercell.getText().trim();
         String address=txtCustomeraddress.getText().trim();
-        
+         
         cd.saveCustomer(name, email, cell, address,tblCustomer);
         cd.showAllCustomer(tblCustomer);
     }//GEN-LAST:event_btnCustomerSaveMouseClicked

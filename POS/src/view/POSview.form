@@ -629,7 +629,7 @@
                               <Component id="btnCategoryDelete" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="btnCategoryReset" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="56" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                           <Component id="jScrollPane2" min="-2" pref="331" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
                       </Group>
