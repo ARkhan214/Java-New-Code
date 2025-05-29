@@ -106,7 +106,14 @@ public class LogeIn extends javax.swing.JFrame {
             this.dispose();
             p.setVisible(true);
 
-        } else {
+        }
+//        else if (userName.equalsIgnoreCase("Customer") && password.equalsIgnoreCase("67890")) {
+//            PosView v = new PosView();
+//            this.dispose();
+//            v.setVisible(true);
+//        }
+        
+        else {
 //            JOptionPane.showMessageDialog(null, "Username and Password name are not match");
 
             JOptionPane.showMessageDialog(null, "Not match", "Geeks Premier League 2023",
