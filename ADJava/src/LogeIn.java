@@ -36,6 +36,7 @@ public class LogeIn extends javax.swing.JFrame {
         btnLogin = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(204, 204, 204));
 
         jLabel1.setText("User Name");
 
@@ -93,27 +94,24 @@ public class LogeIn extends javax.swing.JFrame {
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         // TODO add your handling code here:
 
-        // TODO add your handling code here:
-        
-        
-        
-        
         String userName = userLogIn.getText().toLowerCase().toString().trim();
         String password = passwordLogIn.getText().toString().trim();
 
         if (userName.equalsIgnoreCase("Md Rahim Khan") && password.equalsIgnoreCase("12345")) {
+            
             PosView p = new PosView();
             this.dispose();
             p.setVisible(true);
 
         }
-//        else if (userName.equalsIgnoreCase("Customer") && password.equalsIgnoreCase("67890")) {
-//            PosView v = new PosView();
-//            this.dispose();
-//            v.setVisible(true);
-//        }
+        else if (userName.equalsIgnoreCase("Customer") && password.equalsIgnoreCase("67890")) {
+            PosView v = new PosView();
+            this.dispose();
+            v.setVisible(true);
+        }
         
         else {
+            
 //            JOptionPane.showMessageDialog(null, "Username and Password name are not match");
 
             JOptionPane.showMessageDialog(null, "Not match", "Geeks Premier League 2023",
